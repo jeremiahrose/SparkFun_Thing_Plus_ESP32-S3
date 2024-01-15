@@ -7,7 +7,7 @@
   (title_block
     (title "ESP32 Thing Plus ESP32-S3")
     (date "2023-07-28")
-    (rev "v01")
+    (rev "v10")
     (comment 1 "Designed by: N.Seidle")
   )
 
@@ -4647,6 +4647,110 @@
         )
       )
     )
+    (symbol "SparkFun-PowerSymbol:3.3V" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
+      (property "Reference" "#PWR" (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Value" "3.3V" (at 0 3.556 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Footprint" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_keywords" "global power" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "Power symbol creates a global label with name \"3.3V\"" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "3.3V_0_1"
+        (polyline
+          (pts
+            (xy -0.762 1.27)
+            (xy 0 2.54)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 0 2.54)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 0 2.54)
+            (xy 0.762 1.27)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+      )
+      (symbol "3.3V_1_1"
+        (pin power_in line (at 0 0 90) (length 0) hide
+          (name "3.3V" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
+    (symbol "SparkFun-PowerSymbol:5V" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
+      (property "Reference" "#PWR" (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Value" "5V" (at 0 3.556 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Footprint" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_keywords" "global power" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "Power symbol creates a global label with name \"5V\"" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "5V_0_1"
+        (polyline
+          (pts
+            (xy -0.762 1.27)
+            (xy 0 2.54)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 0 2.54)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 0 2.54)
+            (xy 0.762 1.27)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+      )
+      (symbol "5V_1_1"
+        (pin power_in line (at 0 0 90) (length 0) hide
+          (name "5V" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
     (symbol "SparkFun-PowerSymbol:GND" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
       (property "Reference" "#PWR" (at 0 -6.35 0)
         (effects (font (size 1.27 1.27)) hide)
@@ -5338,7 +5442,7 @@
       (property "Datasheet" "https://www.vishay.com/docs/20035/dcrcwe3.pdf" (at 0 -8.89 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "PROD_ID" "RES-14883" (at 0 -6.858 0)
+      (property "PROD_ID" "RES-15187" (at 0 -6.858 0)
         (effects (font (size 1.27 1.27)) hide)
       )
       (property "ki_keywords" "R res resistor" (at 0 0 0)
@@ -5634,150 +5738,6 @@
         (pin passive line (at 5.08 0 180) (length 2.54)
           (name "B" (effects (font (size 1.27 1.27))))
           (number "2" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
-    (symbol "power:+3.3V" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
-      (property "Reference" "#PWR" (at 0 -3.81 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Value" "+3.3V" (at 0 3.556 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Footprint" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_keywords" "global power" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "Power symbol creates a global label with name \"+3.3V\"" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "+3.3V_0_1"
-        (polyline
-          (pts
-            (xy -0.762 1.27)
-            (xy 0 2.54)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 0 0)
-            (xy 0 2.54)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 0 2.54)
-            (xy 0.762 1.27)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-      )
-      (symbol "+3.3V_1_1"
-        (pin power_in line (at 0 0 90) (length 0) hide
-          (name "+3.3V" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
-    (symbol "power:+5V" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
-      (property "Reference" "#PWR" (at 0 -3.81 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Value" "+5V" (at 0 3.556 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Footprint" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_keywords" "global power" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "Power symbol creates a global label with name \"+5V\"" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "+5V_0_1"
-        (polyline
-          (pts
-            (xy -0.762 1.27)
-            (xy 0 2.54)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 0 0)
-            (xy 0 2.54)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 0 2.54)
-            (xy 0.762 1.27)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-      )
-      (symbol "+5V_1_1"
-        (pin power_in line (at 0 0 90) (length 0) hide
-          (name "+5V" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
-    (symbol "power:GND" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
-      (property "Reference" "#PWR" (at 0 -6.35 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Value" "GND" (at 0 -3.81 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Footprint" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_keywords" "global power" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "Power symbol creates a global label with name \"GND\" , ground" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "GND_0_1"
-        (polyline
-          (pts
-            (xy 0 0)
-            (xy 0 -1.27)
-            (xy 1.27 -1.27)
-            (xy 0 -2.54)
-            (xy -1.27 -1.27)
-            (xy 0 -1.27)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-      )
-      (symbol "GND_1_1"
-        (pin power_in line (at 0 0 270) (length 0) hide
-          (name "GND" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
         )
       )
     )
@@ -7004,7 +6964,7 @@
       )
       (project "SparkFun_Thing_Plus_ESP32-S3"
         (path "/e3dd3ae4-244d-4cba-9cca-5d2abf83f29a"
-          (reference "#PWR0136") (unit 1)
+          (reference "#PWR0117") (unit 1)
         )
       )
     )
@@ -7034,7 +6994,7 @@
       )
       (project "SparkFun_Thing_Plus_ESP32-S3"
         (path "/e3dd3ae4-244d-4cba-9cca-5d2abf83f29a"
-          (reference "#PWR0135") (unit 1)
+          (reference "#PWR0113") (unit 1)
         )
       )
     )
@@ -7075,10 +7035,10 @@
     )
   )
 
-  (symbol (lib_id "power:GND") (at 26.67 60.96 0) (unit 1)
+  (symbol (lib_id "SparkFun-PowerSymbol:GND") (at 26.67 60.96 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 2b102822-bd84-4b0d-8525-60a9fa26bf28)
-    (property "Reference" "#PWR020" (at 26.67 67.31 0)
+    (property "Reference" "#PWR0104" (at 26.67 67.31 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 26.67 64.77 0)
@@ -7094,16 +7054,16 @@
     (instances
       (project "SparkFun_Thing_Plus_ESP32-S3"
         (path "/e3dd3ae4-244d-4cba-9cca-5d2abf83f29a"
-          (reference "#PWR020") (unit 1)
+          (reference "#PWR0104") (unit 1)
         )
       )
     )
   )
 
-  (symbol (lib_id "power:GND") (at 68.58 64.77 0) (unit 1)
+  (symbol (lib_id "SparkFun-PowerSymbol:GND") (at 68.58 64.77 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 2b487cd4-3d69-49d1-af78-e7d2e7bc1629)
-    (property "Reference" "#PWR025" (at 68.58 71.12 0)
+    (property "Reference" "#PWR0101" (at 68.58 71.12 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 68.58 68.58 0)
@@ -7119,16 +7079,16 @@
     (instances
       (project "SparkFun_Thing_Plus_ESP32-S3"
         (path "/e3dd3ae4-244d-4cba-9cca-5d2abf83f29a"
-          (reference "#PWR025") (unit 1)
+          (reference "#PWR0101") (unit 1)
         )
       )
     )
   )
 
-  (symbol (lib_id "power:GND") (at 173.99 57.15 0) (unit 1)
+  (symbol (lib_id "SparkFun-PowerSymbol:GND") (at 173.99 57.15 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 31b30d60-f8e2-4028-886c-53c222a259dc)
-    (property "Reference" "#PWR0117" (at 173.99 63.5 0)
+    (property "Reference" "#PWR0111" (at 173.99 63.5 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 173.99 60.96 0)
@@ -7144,16 +7104,16 @@
     (instances
       (project "SparkFun_Thing_Plus_ESP32-S3"
         (path "/e3dd3ae4-244d-4cba-9cca-5d2abf83f29a"
-          (reference "#PWR0117") (unit 1)
+          (reference "#PWR0111") (unit 1)
         )
       )
     )
   )
 
-  (symbol (lib_id "power:GND") (at 161.29 57.15 0) (unit 1)
+  (symbol (lib_id "SparkFun-PowerSymbol:GND") (at 161.29 57.15 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 32c7d434-83cd-4e38-aa1e-1dc9331895ea)
-    (property "Reference" "#PWR0116" (at 161.29 63.5 0)
+    (property "Reference" "#PWR0110" (at 161.29 63.5 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 161.29 60.96 0)
@@ -7169,7 +7129,7 @@
     (instances
       (project "SparkFun_Thing_Plus_ESP32-S3"
         (path "/e3dd3ae4-244d-4cba-9cca-5d2abf83f29a"
-          (reference "#PWR0116") (unit 1)
+          (reference "#PWR0110") (unit 1)
         )
       )
     )
@@ -7199,10 +7159,10 @@
     )
   )
 
-  (symbol (lib_id "power:GND") (at 133.35 57.15 0) (unit 1)
+  (symbol (lib_id "SparkFun-PowerSymbol:GND") (at 133.35 57.15 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 3a747f1b-71d4-4761-9096-8889cc2aa141)
-    (property "Reference" "#PWR0155" (at 133.35 63.5 0)
+    (property "Reference" "#PWR0126" (at 133.35 63.5 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 133.35 60.96 0)
@@ -7218,19 +7178,19 @@
     (instances
       (project "SparkFun_Thing_Plus_ESP32-S3"
         (path "/e3dd3ae4-244d-4cba-9cca-5d2abf83f29a"
-          (reference "#PWR0155") (unit 1)
+          (reference "#PWR0126") (unit 1)
         )
       )
     )
   )
 
-  (symbol (lib_id "power:+5V") (at 133.35 45.72 0) (unit 1)
+  (symbol (lib_id "SparkFun-PowerSymbol:5V") (at 133.35 45.72 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 3ac5ebee-685e-4089-bb65-66f78a67bad4)
-    (property "Reference" "#PWR0142" (at 133.35 49.53 0)
+    (property "Reference" "#PWR0124" (at 133.35 49.53 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "+5V" (at 133.35 42.164 0)
+    (property "Value" "5V" (at 133.35 42.164 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "" (at 133.35 45.72 0)
@@ -7243,7 +7203,7 @@
     (instances
       (project "SparkFun_Thing_Plus_ESP32-S3"
         (path "/e3dd3ae4-244d-4cba-9cca-5d2abf83f29a"
-          (reference "#PWR0142") (unit 1)
+          (reference "#PWR0124") (unit 1)
         )
       )
     )
@@ -7329,7 +7289,7 @@
       )
       (project "SparkFun_Thing_Plus_ESP32-S3"
         (path "/e3dd3ae4-244d-4cba-9cca-5d2abf83f29a"
-          (reference "#PWR08") (unit 1)
+          (reference "#PWR0115") (unit 1)
         )
       )
     )
@@ -7541,7 +7501,7 @@
       )
       (project "SparkFun_Thing_Plus_ESP32-S3"
         (path "/e3dd3ae4-244d-4cba-9cca-5d2abf83f29a"
-          (reference "#PWR07") (unit 1)
+          (reference "#PWR0120") (unit 1)
         )
       )
     )
@@ -7631,7 +7591,7 @@
       )
       (project "SparkFun_Thing_Plus_ESP32-S3"
         (path "/e3dd3ae4-244d-4cba-9cca-5d2abf83f29a"
-          (reference "#PWR0134") (unit 1)
+          (reference "#PWR0121") (unit 1)
         )
       )
     )
@@ -7670,10 +7630,10 @@
     )
   )
 
-  (symbol (lib_id "power:GND") (at 152.4 58.42 0) (unit 1)
+  (symbol (lib_id "SparkFun-PowerSymbol:GND") (at 152.4 58.42 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 63b62649-6eff-443b-8571-64537f6ead93)
-    (property "Reference" "#PWR0156" (at 152.4 64.77 0)
+    (property "Reference" "#PWR0125" (at 152.4 64.77 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 152.4 62.23 0)
@@ -7689,16 +7649,16 @@
     (instances
       (project "SparkFun_Thing_Plus_ESP32-S3"
         (path "/e3dd3ae4-244d-4cba-9cca-5d2abf83f29a"
-          (reference "#PWR0156") (unit 1)
+          (reference "#PWR0125") (unit 1)
         )
       )
     )
   )
 
-  (symbol (lib_id "power:GND") (at 19.05 60.96 0) (unit 1)
+  (symbol (lib_id "SparkFun-PowerSymbol:GND") (at 19.05 60.96 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 65449563-3d64-4b4b-a09b-ba412051b716)
-    (property "Reference" "#PWR019" (at 19.05 67.31 0)
+    (property "Reference" "#PWR0103" (at 19.05 67.31 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 19.05 64.77 0)
@@ -7714,7 +7674,7 @@
     (instances
       (project "SparkFun_Thing_Plus_ESP32-S3"
         (path "/e3dd3ae4-244d-4cba-9cca-5d2abf83f29a"
-          (reference "#PWR019") (unit 1)
+          (reference "#PWR0103") (unit 1)
         )
       )
     )
@@ -7820,13 +7780,13 @@
     )
   )
 
-  (symbol (lib_id "power:+3.3V") (at 161.29 45.72 0) (unit 1)
+  (symbol (lib_id "SparkFun-PowerSymbol:3.3V") (at 161.29 45.72 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 70bef02b-653d-4a36-a4f1-21826f35b5d0)
-    (property "Reference" "#PWR0115" (at 161.29 49.53 0)
+    (property "Reference" "#PWR0106" (at 161.29 49.53 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "+3.3V" (at 161.29 42.164 0)
+    (property "Value" "3.3V" (at 161.29 42.164 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "" (at 161.29 45.72 0)
@@ -7839,7 +7799,7 @@
     (instances
       (project "SparkFun_Thing_Plus_ESP32-S3"
         (path "/e3dd3ae4-244d-4cba-9cca-5d2abf83f29a"
-          (reference "#PWR0115") (unit 1)
+          (reference "#PWR0106") (unit 1)
         )
       )
     )
@@ -7880,13 +7840,13 @@
     )
   )
 
-  (symbol (lib_id "power:+3.3V") (at 186.69 29.21 0) (unit 1)
+  (symbol (lib_id "SparkFun-PowerSymbol:3.3V") (at 186.69 29.21 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 75fc53da-f40c-48dc-802d-b4f6de9fdeef)
-    (property "Reference" "#PWR0110" (at 186.69 33.02 0)
+    (property "Reference" "#PWR0108" (at 186.69 33.02 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "+3.3V" (at 186.69 25.654 0)
+    (property "Value" "3.3V" (at 186.69 25.654 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "" (at 186.69 29.21 0)
@@ -7899,7 +7859,7 @@
     (instances
       (project "SparkFun_Thing_Plus_ESP32-S3"
         (path "/e3dd3ae4-244d-4cba-9cca-5d2abf83f29a"
-          (reference "#PWR0110") (unit 1)
+          (reference "#PWR0108") (unit 1)
         )
       )
     )
@@ -7929,7 +7889,7 @@
       )
       (project "SparkFun_Thing_Plus_ESP32-S3"
         (path "/e3dd3ae4-244d-4cba-9cca-5d2abf83f29a"
-          (reference "#PWR0144") (unit 1)
+          (reference "#PWR0122") (unit 1)
         )
       )
     )
@@ -7959,13 +7919,13 @@
     )
   )
 
-  (symbol (lib_id "power:+5V") (at 123.19 46.99 0) (unit 1)
+  (symbol (lib_id "SparkFun-PowerSymbol:5V") (at 123.19 46.99 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 7eb6a645-dff8-49af-aec7-a470683cc34a)
-    (property "Reference" "#PWR0137" (at 123.19 50.8 0)
+    (property "Reference" "#PWR0127" (at 123.19 50.8 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "+5V" (at 123.19 43.434 0)
+    (property "Value" "5V" (at 123.19 43.434 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "" (at 123.19 46.99 0)
@@ -7978,16 +7938,16 @@
     (instances
       (project "SparkFun_Thing_Plus_ESP32-S3"
         (path "/e3dd3ae4-244d-4cba-9cca-5d2abf83f29a"
-          (reference "#PWR0137") (unit 1)
+          (reference "#PWR0127") (unit 1)
         )
       )
     )
   )
 
-  (symbol (lib_id "power:GND") (at 191.77 163.83 0) (unit 1)
+  (symbol (lib_id "SparkFun-PowerSymbol:GND") (at 191.77 163.83 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 866398ad-8532-49f9-90fb-5ef831a100d6)
-    (property "Reference" "#PWR03" (at 191.77 170.18 0)
+    (property "Reference" "#PWR0128" (at 191.77 170.18 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 191.77 167.64 0)
@@ -8003,7 +7963,7 @@
     (instances
       (project "SparkFun_Thing_Plus_ESP32-S3"
         (path "/e3dd3ae4-244d-4cba-9cca-5d2abf83f29a"
-          (reference "#PWR03") (unit 1)
+          (reference "#PWR0128") (unit 1)
         )
       )
     )
@@ -8061,13 +8021,13 @@
     )
   )
 
-  (symbol (lib_id "power:+3.3V") (at 25.4 175.26 0) (unit 1)
+  (symbol (lib_id "SparkFun-PowerSymbol:3.3V") (at 25.4 175.26 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 8fc51c21-58e0-4605-a827-7ae5e81cc13c)
     (property "Reference" "#PWR0102" (at 25.4 179.07 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "+3.3V" (at 25.4 171.704 0)
+    (property "Value" "3.3V" (at 25.4 171.704 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "" (at 25.4 175.26 0)
@@ -8085,7 +8045,7 @@
       )
       (project "SparkFun_Thing_Plus_ESP32-S3"
         (path "/e3dd3ae4-244d-4cba-9cca-5d2abf83f29a"
-          (reference "#PWR010") (unit 1)
+          (reference "#PWR0116") (unit 1)
         )
       )
     )
@@ -8300,7 +8260,7 @@
     (property "Datasheet" "https://www.vishay.com/docs/20035/dcrcwe3.pdf" (at 33.02 143.51 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "PROD_ID" "RES-14883" (at 30.988 143.51 0)
+    (property "PROD_ID" "RES-15187" (at 30.988 143.51 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid a60cdc03-e329-41a2-8392-e03b9222f91a))
@@ -8314,13 +8274,13 @@
     )
   )
 
-  (symbol (lib_id "power:+3.3V") (at 36.83 87.63 0) (unit 1)
+  (symbol (lib_id "SparkFun-PowerSymbol:3.3V") (at 36.83 87.63 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid c218d6ab-7e86-4a00-9187-ad27661f4fb6)
     (property "Reference" "#PWR0102" (at 36.83 91.44 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "+3.3V" (at 36.83 84.074 0)
+    (property "Value" "3.3V" (at 36.83 84.074 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "" (at 36.83 87.63 0)
@@ -8338,19 +8298,19 @@
       )
       (project "SparkFun_Thing_Plus_ESP32-S3"
         (path "/e3dd3ae4-244d-4cba-9cca-5d2abf83f29a"
-          (reference "#PWR0151") (unit 1)
+          (reference "#PWR0123") (unit 1)
         )
       )
     )
   )
 
-  (symbol (lib_id "power:+5V") (at 143.51 33.02 0) (unit 1)
+  (symbol (lib_id "SparkFun-PowerSymbol:5V") (at 143.51 33.02 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid c56ac8ed-d9e9-4ae4-88e8-1bae871e169e)
-    (property "Reference" "#PWR04" (at 143.51 36.83 0)
+    (property "Reference" "#PWR0107" (at 143.51 36.83 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "+5V" (at 143.51 29.464 0)
+    (property "Value" "5V" (at 143.51 29.464 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "" (at 143.51 33.02 0)
@@ -8363,19 +8323,19 @@
     (instances
       (project "SparkFun_Thing_Plus_ESP32-S3"
         (path "/e3dd3ae4-244d-4cba-9cca-5d2abf83f29a"
-          (reference "#PWR04") (unit 1)
+          (reference "#PWR0107") (unit 1)
         )
       )
     )
   )
 
-  (symbol (lib_id "power:+3.3V") (at 63.5 91.44 0) (unit 1)
+  (symbol (lib_id "SparkFun-PowerSymbol:3.3V") (at 63.5 91.44 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid c7391781-4d72-47e0-b578-ddd5a455b1b2)
     (property "Reference" "#PWR0102" (at 63.5 95.25 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "+3.3V" (at 63.5 87.884 0)
+    (property "Value" "3.3V" (at 63.5 87.884 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "" (at 63.5 91.44 0)
@@ -8393,7 +8353,7 @@
       )
       (project "SparkFun_Thing_Plus_ESP32-S3"
         (path "/e3dd3ae4-244d-4cba-9cca-5d2abf83f29a"
-          (reference "#PWR05") (unit 1)
+          (reference "#PWR0112") (unit 1)
         )
       )
     )
@@ -8434,13 +8394,13 @@
     )
   )
 
-  (symbol (lib_id "power:+3.3V") (at 36.83 175.26 0) (unit 1)
+  (symbol (lib_id "SparkFun-PowerSymbol:3.3V") (at 36.83 175.26 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid d130db96-6a8c-4a80-8210-99d7a7ed7e83)
     (property "Reference" "#PWR0102" (at 36.83 179.07 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "+3.3V" (at 36.83 171.704 0)
+    (property "Value" "3.3V" (at 36.83 171.704 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "" (at 36.83 175.26 0)
@@ -8458,7 +8418,7 @@
       )
       (project "SparkFun_Thing_Plus_ESP32-S3"
         (path "/e3dd3ae4-244d-4cba-9cca-5d2abf83f29a"
-          (reference "#PWR09") (unit 1)
+          (reference "#PWR0119") (unit 1)
         )
       )
     )
@@ -8499,10 +8459,10 @@
     )
   )
 
-  (symbol (lib_id "power:GND") (at 52.07 60.96 0) (unit 1)
+  (symbol (lib_id "SparkFun-PowerSymbol:GND") (at 52.07 60.96 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid d435073a-1fb7-4866-9141-cb23266d77fc)
-    (property "Reference" "#PWR023" (at 52.07 67.31 0)
+    (property "Reference" "#PWR0105" (at 52.07 67.31 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 52.07 64.77 0)
@@ -8518,7 +8478,7 @@
     (instances
       (project "SparkFun_Thing_Plus_ESP32-S3"
         (path "/e3dd3ae4-244d-4cba-9cca-5d2abf83f29a"
-          (reference "#PWR023") (unit 1)
+          (reference "#PWR0105") (unit 1)
         )
       )
     )
@@ -8553,10 +8513,10 @@
     )
   )
 
-  (symbol (lib_id "power:GND") (at 43.18 60.96 0) (unit 1)
+  (symbol (lib_id "SparkFun-PowerSymbol:GND") (at 43.18 60.96 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid d5737282-c180-424c-9a7a-88f4a926c79b)
-    (property "Reference" "#PWR022" (at 43.18 67.31 0)
+    (property "Reference" "#PWR0102" (at 43.18 67.31 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 43.18 64.77 0)
@@ -8572,7 +8532,7 @@
     (instances
       (project "SparkFun_Thing_Plus_ESP32-S3"
         (path "/e3dd3ae4-244d-4cba-9cca-5d2abf83f29a"
-          (reference "#PWR022") (unit 1)
+          (reference "#PWR0102") (unit 1)
         )
       )
     )
@@ -8694,13 +8654,13 @@
     )
   )
 
-  (symbol (lib_id "power:+3.3V") (at 179.07 97.79 0) (unit 1)
+  (symbol (lib_id "SparkFun-PowerSymbol:3.3V") (at 179.07 97.79 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f24491f7-7564-4b8e-96b8-070f375c091f)
-    (property "Reference" "#PWR0132" (at 179.07 101.6 0)
+    (property "Reference" "#PWR0129" (at 179.07 101.6 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "+3.3V" (at 179.07 93.98 0)
+    (property "Value" "3.3V" (at 179.07 94.234 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "" (at 179.07 97.79 0)
@@ -8713,7 +8673,7 @@
     (instances
       (project "SparkFun_Thing_Plus_ESP32-S3"
         (path "/e3dd3ae4-244d-4cba-9cca-5d2abf83f29a"
-          (reference "#PWR0132") (unit 1)
+          (reference "#PWR0129") (unit 1)
         )
       )
     )
@@ -8743,16 +8703,16 @@
       )
       (project "SparkFun_Thing_Plus_ESP32-S3"
         (path "/e3dd3ae4-244d-4cba-9cca-5d2abf83f29a"
-          (reference "#PWR0143") (unit 1)
+          (reference "#PWR0118") (unit 1)
         )
       )
     )
   )
 
-  (symbol (lib_id "power:GND") (at 186.69 57.15 0) (unit 1)
+  (symbol (lib_id "SparkFun-PowerSymbol:GND") (at 186.69 57.15 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f590415b-0a77-40ce-89b1-28409834e892)
-    (property "Reference" "#PWR0103" (at 186.69 63.5 0)
+    (property "Reference" "#PWR0109" (at 186.69 63.5 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 186.69 60.96 0)
@@ -8768,7 +8728,7 @@
     (instances
       (project "SparkFun_Thing_Plus_ESP32-S3"
         (path "/e3dd3ae4-244d-4cba-9cca-5d2abf83f29a"
-          (reference "#PWR0103") (unit 1)
+          (reference "#PWR0109") (unit 1)
         )
       )
     )
