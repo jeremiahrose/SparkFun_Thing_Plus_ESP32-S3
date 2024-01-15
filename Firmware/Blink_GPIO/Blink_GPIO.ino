@@ -1,14 +1,15 @@
-int gpios[] = {42, 43, 44, 13, 11, 12, 18, 17, 16, 15, 14, 10, 8, 9, 1, 2, 4, 5, 6, 7, 21};
+//int gpios[] = {43, 44, 8, 9, 13, 11, 12, 10, 14, 15, 16, 17, 18, 21, 7, 6, 5, 4, 2, 1, 42};
+int gpios[] = {48}; //Card detect
+//int gpios[] = {45}; //Qwiic power control
+//int gpios[] = {0}; //STAT LED
 
 void setup()
 {
   Serial.begin(115200);
-  delay(250);
+  while (Serial == false); //Wait for serial monitor to connect before printing anything
   Serial.println("GPIO test");
 
   int spotTest = 0;
-
-  while (Serial.available()) Serial.read();
 
   while (1)
   {
@@ -17,6 +18,9 @@ void setup()
     pinMode(pinTest, OUTPUT);
 
     Serial.printf("Testing pin %d. Press any key to move to next test.\r\n", pinTest);
+    
+    while (Serial.available()) Serial.read();
+    
     while (1)
     {
       Serial.printf("Pin %d low\r\n", pinTest);

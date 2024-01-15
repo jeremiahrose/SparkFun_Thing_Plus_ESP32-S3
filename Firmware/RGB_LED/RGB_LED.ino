@@ -9,10 +9,13 @@
 
 CRGB leds[NUM_LEDS];
 
-void setup() {
-  delay(30); // sanity delay
-  FastLED.addLeds<CHIPSET, LED_PIN, COLOR_ORDER>(leds, NUM_LEDS).setCorrection( TypicalLEDStrip );
-  FastLED.setBrightness( BRIGHTNESS );
+void setup()
+{
+  Serial.begin(115200);
+  while (Serial == false); //Wait for serial monitor to connect before printing anything
+
+  FastLED.addLeds<CHIPSET, LED_PIN, COLOR_ORDER>(leds, NUM_LEDS).setCorrection(TypicalLEDStrip);
+  FastLED.setBrightness(BRIGHTNESS);
 }
 
 void loop()

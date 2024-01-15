@@ -6,15 +6,18 @@
 
 #include <Wire.h>
 
-int qwiicPower = 45; //Thing Plus C 45 is connected to the v-reg that controls the Qwiic power
+int pin_qwiicPower = 45; //Thing Plus S3 45 is connected to the v-reg that controls the Qwiic power
 
 void setup()
 {
   Serial.begin(115200);
+  while (Serial == false); //Wait for serial monitor to connect before printing anything
+
   Serial.println("I2C Scanner");
 
-  pinMode(qwiicPower, OUTPUT);
-  digitalWrite(qwiicPower, HIGH);
+  //Power on Qwiic connector
+  pinMode(pin_qwiicPower, OUTPUT);
+  digitalWrite(pin_qwiicPower, HIGH);
 
   Wire.begin();
 }
@@ -22,9 +25,9 @@ void setup()
 void loop()
 {
   //Toggle the power on the Qwiic connector
-  digitalWrite(qwiicPower, LOW);
+  digitalWrite(pin_qwiicPower, LOW);
   delay(2000); //Power LED on a Qwiic board should now be off
-  digitalWrite(qwiicPower, HIGH);
+  digitalWrite(pin_qwiicPower, HIGH);
   delay(1000); //Power LED on a Qwiic board should now be on
 
   Serial.println();

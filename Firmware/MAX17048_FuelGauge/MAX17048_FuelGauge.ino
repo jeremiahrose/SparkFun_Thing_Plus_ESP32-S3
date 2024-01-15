@@ -1,9 +1,7 @@
 /*
   Attach a LiPo to the JST connector.
-  
-  We don't need to power up the Qwiic bus because the Fuel Gauge IC
-  gets power from the LiPo. 
 
+  The I2C pullups are tied to Qwiic power so if Qwiic power is off, the pullups are off.
 */
 
 #include <Wire.h> // Needed for I2C
@@ -11,19 +9,25 @@
 #include <SparkFun_MAX1704x_Fuel_Gauge_Arduino_Library.h> // Click here to get the library: http://librarymanager/All#SparkFun_MAX1704x_Fuel_Gauge_Arduino_Library
 SFE_MAX1704X lipo(MAX1704X_MAX17048); // Allow access to all the 17048 features
 
+int pin_qwiicPower = 45; //Thing Plus S3 45 is connected to the v-reg that controls the Qwiic power
+
 void setup()
 {
-	Serial.begin(115200); // Start serial, to output debug data
-  Serial.println(F("MAX17048 Example"));
+  Serial.begin(115200); // Start serial, to output debug data
+  while (Serial == false); //Wait for serial monitor to connect before printing anything
+  Serial.println("MAX17048 Example");
+
+  //Power on Qwiic bus to enable I2C pullups
+  pinMode(pin_qwiicPower, OUTPUT);
+  digitalWrite(pin_qwiicPower, HIGH);
 
   Wire.begin();
-
-  // Set up the MAX17048 LiPo fuel gauge:
+  
+   // Set up the MAX17048 LiPo fuel gauge:
   if (lipo.begin() == false) // Connect to the MAX17048 using the default wire port
   {
-    Serial.println(F("MAX17048 not detected. Please check wiring. Freezing."));
-    while (1)
-      ;
+    Serial.println("MAX17048 not detected. Please check wiring. Freezing.");
+    while (true);
   }
 }
 
