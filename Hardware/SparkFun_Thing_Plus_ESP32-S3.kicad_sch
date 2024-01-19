@@ -7592,10 +7592,10 @@
   (symbol (lib_id "SparkFun-Jumper:SolderJumper_2_Bridged") (at 186.69 34.29 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 5d8779de-686a-4e89-aa08-768869ae185d)
-    (property "Reference" "PWR1" (at 184.658 34.29 0)
+    (property "Reference" "JP1" (at 184.658 34.29 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "~" (at 189.23 34.29 0)
+    (property "Value" "PWR" (at 189.23 34.29 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "SparkFun-Jumper:SMT-JUMPER_2_NC_TRACE_SILK" (at 191.262 34.544 0)
@@ -7609,7 +7609,7 @@
     (instances
       (project "SparkFun_Thing_Plus_ESP32-S3"
         (path "/e3dd3ae4-244d-4cba-9cca-5d2abf83f29a"
-          (reference "PWR1") (unit 1)
+          (reference "JP1") (unit 1)
         )
       )
     )
