@@ -1,0 +1,1 @@
+For more information about the Thing Plus - ESP32-S3, check out the resources below:
