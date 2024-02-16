@@ -26,12 +26,18 @@ The USB-C connector on the board acts as the primary serial interface for the ES
 
 The board has a 2-pin JST connector to connect a single-cell Lithium Ion (LiPo) battery for battery-powered applications. It also has an MCP73831 battery charger to charge an attached battery and a MAX17048 fuel gauge to monitor battery voltage levels. The charge rate is set to <b>214mA@3.3V</b>. The MCP73831 receives power from the V_USB line so it only is powered when <b>5V</b> is provided either over USB or the V_USB PTH pin. If applying voltage directly to the V_USB pin make sure it does not exceed <b>5.5V</b>.
 
+The MAX17048's I<sup>2</sup>C lines are pulled up to <b>3.3V_P</b> to allow for customizable power options. Read on below for more information about peripheral power.
+
+## Peripheral Power Control
+
+The board includes a second RT9080 3.3V regulator to control power to the peripheral 3.3V (3.3V_P) rail. This is powered on by default with some options for user control to help conserve power. The RT9080's EN (Enable) pin is tied to ESP45 so users can drive it LOW in their code to disable this line. It also is tied to the main 3.3V rail through the <b>LP_CTL</b> solder jumper so it defaults to powered on. If this solder jumper is opened, it defaults to off when the ESP32-S3 is power-cycled though users can drive the ESP45 pin HIGH in their code to enable the 3.3V_P rail.
+
 ## Pinout & Qwiic Connector
 
 Thing Plus boards break out a large number of GPIO and interface pins to a pair of 0.1"-spaced plated through-hole (PTH) headers and also has a Qwiic connector for easy integration into SparkFun's [Qwiic ecosystem](https://www.sparkfun.com/qwiic).
 
 <figure markdown>
-[![Photo highlighting through-hole pinouts.](./assets/){ width="600"}](./assets/ "Click to enlarge")
+[![Photo highlighting pinout and Qwiic connector.](./assets/){ width="600"}](./assets/ "Click to enlarge")
 </figure>
 
 ### PTH Headers
@@ -40,11 +46,17 @@ Thing Plus boards break out a large number of GPIO and interface pins to a pair 
 
 ### Qwiic Connector
 
-The Qwiic connector is tied to the ESP32-S3's I<sup>2</sup>C bus (IO8/SDA and IO9/SCL). The Qwiic connector provides connections for SDA, SCL, 3.3V, and Ground.
+The Qwiic connector is tied to the ESP32-S3's I<sup>2</sup>C bus (IO8/SDA and IO9/SCL). The Qwiic connector provides connections for SDA, SCL, 3.3V, and Ground. Note, the Qwiic connector power and I<sup>2</sup>C pins are tied to 3.3V_P and are powered by default but if the peripheral power control circuit is adjusted as covered above, it will not function properly without enabling 3.3V_P through code.
 
 ## &micro;SD Card Slot
 
-The board has a &micro;SD card slot that connects to the ESP32-S3's SDIO-4 pins. It is a fricton-fit connector so no "clicking" and "unclicking" is necessary. Just plug it in nice and snug. We chose to tie the SD card the SDIO interface instead of the dedicated SPI bus as we found it to be reliably faster for read/write speeds averaging roughly 2-3MB/s (read) and ~5-7MB/s (write) though speeds vary depending on the card used.
+The board has a &micro;SD card slot that connects to the ESP32-S3's SDIO-4 pins. It is a fricton-fit connector so no "clicking" and "unclicking" is necessary. Just plug it in nice and snug. 
+
+<figure markdown>
+[![Photo highlighting microSD card slot.](./assets/){ width="600"}](./assets/ "Click to enlarge")
+</figure>
+
+We chose to tie the SD card the SDIO interface instead of the dedicated SPI bus as we found it to be reliably faster for read/write speeds averaging roughly 2-3MB/s (read) and ~5-7MB/s (write) though speeds vary depending on the card used. One thing to note about this connector is the SD Card Detect pin is pulled to Ground (LOW) with no card present and shorts to 3.3V (HIGH) with a card inserted. Read on to the "Arduino Examples" section for a detailed example on how to monitor and read this pin.
 
 ## Buttons
 
@@ -56,11 +68,22 @@ There are two buttons on the board labeled <b>RESET</b> and <b>BOOT</b>. The RES
 
 ## LEDs
 
-This Thing Plus has three LEDs labeled <b>PWR</b>, <b>CHG</b>, and <b>STAT</b>. The red Power (PWR) LED indicates whenever the <b>3.3V</b> circuit is powered. The yellow Charge (CHG) LED indicates whenever the MCP73831 is charging a connected LiPo battery. The WS2812 RGB Status (STAT) LED connects the LED's Data In signal to IO46.
+This Thing Plus has three standard LEDs labeled <b>PWR</b>, <b>CHG</b>, <b>STAT</b>, and a WS2812 RGB LED next to the ESP32-S3 module on the top of the board. The red Power (PWR) LED indicates whenever the <b>3.3V</b> circuit is powered. The yellow Charge (CHG) LED indicates whenever the MCP73831 is charging a connected LiPo battery. The green Status (STAT) LED is tied to IO0. The WS2812 RGB LED connects the LED's Data In signal to IO46.
 
 <figure markdown>
-[![Photo highlighting solder jumpers.](./assets/Thing_Plus_S3-LEDs.jpg){ width="600"}](./assets/ "Click to enlarge")
+[![Photo highlighting LEDs.](./assets/){ width="600"}](./assets/ "Click to enlarge")
 </figure>
 
 ## Solder Jumpers
 
+The board has three solder jumpers labeled <b>PWR</b>, <b>CHG</b>, and <b>LP_CTL</b>. The <b>PWR</b> jumper completes the circuit for the Power LED and is CLOSED by default. Open it to disable the Power LED. The <b>CHG</b> jumper completes the circuit for the Charge LED and is CLOSED by default. Open the solder jumper to disable the Charge LED.
+
+The <b>LP_CTL</b> jumper controls how the Low Power and Peripherals power works. It is CLOSED by default to pull the power the RT9080 3.3V regulator's enable pin HIGH to enable peripheral power on the <b>3.3V_P</b> rail. 
+
+## Board Dimensions
+
+This board matches the Thing Plus footprint and measures 2.30" x 0.90" (58.42mm x 22.86mm) with four mounting holes that fit a [4-40 screw](https://www.sparkfun.com/products/10453) though the top two mounting holes are slightly obstructed by the ESP32-S3 module so using those can be a bit troublesome.
+
+<figure markdown>
+[![Board dimensions.](./assets/){ width="600"}](./assets/ "Click to enlarge")
+</figure>
