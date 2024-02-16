@@ -73,6 +73,31 @@
     "version": 3
   },
   "project": {
-    "files": []
+    "files": [
+      {
+        "name": "SparkFun_Thing_Plus_ESP32-S3.kicad_pcb",
+        "open": false,
+        "window": {
+          "display": 1,
+          "maximized": true,
+          "pos_x": 1912,
+          "pos_y": -51,
+          "size_x": 1936,
+          "size_y": 1056
+        }
+      },
+      {
+        "name": "SparkFun_Thing_Plus_ESP32-S3.kicad_sch",
+        "open": false,
+        "window": {
+          "display": 1,
+          "maximized": false,
+          "pos_x": 1989,
+          "pos_y": 0,
+          "size_x": 1936,
+          "size_y": 1056
+        }
+      }
+    ]
   }
 }
