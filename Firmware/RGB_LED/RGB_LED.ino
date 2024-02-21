@@ -11,6 +11,7 @@
   Buy a board from SparkFun!
   SparkFun ESP32-S3 Thing Plus (DEV-24408) https://www.sparkfun.com/products/24408
 
+  Select the following in the Arduino IDE:
   Board: ESP32S3 Dev Module
   USB Mode: Hardware CDC and JTAG
   USB CDC on Boot: Enabled

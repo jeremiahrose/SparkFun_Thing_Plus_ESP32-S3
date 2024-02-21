@@ -11,6 +11,7 @@
   Buy a board from SparkFun!
   SparkFun ESP32-S3 Thing Plus (DEV-24408) https://www.sparkfun.com/products/24408
 
+  Select the following in the Arduino IDE:
   Board: ESP32S3 Dev Module
   USB Mode: Hardware CDC and JTAG
   USB CDC on Boot: Enabled
@@ -20,9 +21,7 @@
 */
 
 //int gpios[] = {43, 44, 8, 9, 13, 11, 12, 10, 14, 15, 16, 17, 18, 21, 7, 6, 5, 4, 2, 1, 42};
-int gpios[] = {48}; //Card detect
-//int gpios[] = {45}; //Qwiic power control
-//int gpios[] = {0}; //STAT LED
+int gpios[] = {0}; //STAT LED
 
 void setup()
 {
