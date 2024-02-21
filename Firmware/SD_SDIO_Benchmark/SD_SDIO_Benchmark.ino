@@ -1,11 +1,31 @@
 /*
-  ESP32 core v2.0.14
+  Use the built-in ESP32 SD_MMC library to test the SD write speed over 4-bit SDIO.
+  By: Nathan Seidle
+  SparkFun Electronics
+  Date: January 13, 2024
+  License: MIT. Please see LICENSE.md for more information.
 
   This demonstrates 4-bit SDIO write and read speed averages. We found
   2.5MB/s to ~4.1MB/s on various microSD cards 1GB to 32GB.
 
   These exmaples are written not to demonstrate the absolute extremes that a library
-  may be capable. Instead, we try to emulate normal user experiences, with basic read/writes.  
+  may be capable. Instead, we try to emulate normal user experiences, with basic read/writes.
+
+  Shockingly, sdFat performed as fast, or faster than the SDIO 4-bit interface in many circumstances.
+
+  Tested using ESP32 core v2.0.14
+
+  Feel like supporting open source hardware?
+  Buy a board from SparkFun!
+  SparkFun ESP32-S3 Thing Plus (DEV-24408) https://www.sparkfun.com/products/24408
+
+  Select the following in the Arduino IDE:
+  Board: ESP32S3 Dev Module
+  USB Mode: Hardware CDC and JTAG
+  USB CDC on Boot: Enabled
+  Upload Mode: UART0 / Hardware CDC
+  PSRAM: QSPI PSRAM
+  Port: Select the COM port that the device shows up on under device manager
 */
 
 #include "FS.h"

@@ -6,30 +6,30 @@
   License: MIT. Please see LICENSE.md for more information.
 
   This example shows how to enable PSRAM on ESP32-S3 modules that have it, and use it for
-  RAM requests above a certain byte threshold. 
+  RAM requests above a certain byte threshold.
 
-  Note: Not all ESP32 modules have PSRAM built-in.
+  Note: Not all ESP32 modules have PSRAM built-in. The SparkFun ESP32-S3 uses the 
+  ESP32-S3 Mini N8R2 with 8MB flash and 2MB PSRAM. 
 
   Feel like supporting open source hardware?
   Buy a board from SparkFun!
-  SparkFun ESP32-S3 Thing Plus (DEV-24408)    https://www.sparkfun.com/products/24408
+  SparkFun ESP32-S3 Thing Plus (DEV-24408) https://www.sparkfun.com/products/24408
 
+  Select the following in the Arduino IDE:
   Board: ESP32S3 Dev Module
   USB Mode: Hardware CDC and JTAG
   USB CDC on Boot: Enabled
-  Upload Mode: USB-OTG CDC (Tiny USB)
-  PSRAM: OPI PSRAM
+  Upload Mode: UART0 / Hardware CDC
+  PSRAM: QSPI PSRAM
   Port: Select the COM port that the device shows up on under device manager
- 
-  USB Firmware MSC on Boot: Disabled
- */
+*/
 
 unsigned long lastHeapReport;
 
 void setup()
 {
   Serial.begin(115200);
-  while(Serial == false); //Wait for serial monitor to connect before printing anything
+  while (Serial == false); //Wait for serial monitor to connect before printing anything
 
   if (psramInit() == false)
     Serial.println("PSRAM failed to initialize");
@@ -51,7 +51,7 @@ void loop()
     reportHeap();
   }
 
-  if(Serial.available()) ESP.restart();
+  if (Serial.available()) ESP.restart();
 }
 
 void reportHeap()

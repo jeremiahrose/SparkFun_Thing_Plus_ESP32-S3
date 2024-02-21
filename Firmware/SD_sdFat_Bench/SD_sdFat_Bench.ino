@@ -1,5 +1,9 @@
 /*
-  ESP32 core v2.0.14
+  Use the sdFat library to test the SD write speed over SPI.
+  By: Nathan Seidle
+  SparkFun Electronics
+  Date: January 13, 2024
+  License: MIT. Please see LICENSE.md for more information.
 
   This demonstrates SPI interface to SD, write and read speed averages. We found
   2.5MB/s to ~4.1MB/s on various microSD cards 1GB to 32GB.
@@ -11,13 +15,27 @@
 
   This depends a lot on how fast you can run the SPI clock (obviously).
   
-  Interstingly, SPI inteface allows faster small writes (10k, 100k) as opposed to SDIO mode.
+  Interstingly, SPI interface allows faster small writes (10k, 100k) as opposed to SDIO mode.
 
   Dedicated SPI is very much required to achieve fast speed. If you don't have a dedicated
   SPI interface, consider SDIO, or using a micro that has multiple SPI ports.
 
   sdFat over SPI also supports exFat for very large SD cards (up to 1TB) where as the ESP32
   SDIO library support only FAT32 up to 32GB cards.
+
+  Tested using ESP32 core v2.0.14
+
+  Feel like supporting open source hardware?
+  Buy a board from SparkFun!
+  SparkFun ESP32-S3 Thing Plus (DEV-24408) https://www.sparkfun.com/products/24408
+
+  Select the following in the Arduino IDE:
+  Board: ESP32S3 Dev Module
+  USB Mode: Hardware CDC and JTAG
+  USB CDC on Boot: Enabled
+  Upload Mode: UART0 / Hardware CDC
+  PSRAM: QSPI PSRAM
+  Port: Select the COM port that the device shows up on under device manager
 */
 
 #include <SPI.h>
@@ -26,16 +44,16 @@
 SdFat SD;
 
 //ESP32 Thing Plus
-int pin_spiSCK = 18;
-int pin_spiPICO = 23; //microSD SDI
-int pin_spiPOCI = 19; //microSD SDO
-int pin_spiCS = 5;
+//int pin_spiSCK = 18;
+//int pin_spiPICO = 23; //microSD SDI
+//int pin_spiPOCI = 19; //microSD SDO
+//int pin_spiCS = 5;
 
 //ESP32-S3 Thing Plus
-//int pin_spiSCK = 38;
-//int pin_spiPICO = 34; //microSD SDI
-//int pin_spiPOCI = 39; //microSD SDO
-//int pin_spiCS = 33;
+int pin_spiSCK = 38;
+int pin_spiPICO = 34; //microSD SDI
+int pin_spiPOCI = 39; //microSD SDO
+int pin_spiCS = 33;
 
 void setup()
 {
@@ -57,13 +75,12 @@ void runTestsSPI()
 {
   SPI.begin(pin_spiSCK, pin_spiPOCI, pin_spiPICO, pin_spiCS);
 
-  //if (!SD.begin(SdSpiConfig(pin_spiCS, SHARED_SPI, SD_SCK_MHZ(50))
-//  if (!SD.begin(SdSpiConfig(pin_spiCS, DEDICATED_SPI, SD_SCK_MHZ(30)))) //Fails on ESP32 Thing Plus
   if (!SD.begin(SdSpiConfig(pin_spiCS, DEDICATED_SPI, SD_SCK_MHZ(25))))
   {
     Serial.println("SD failed!");
     return;
   }
+  Serial.println("SD started");
 
   float avgWriteSpeed = 0.0;
   float avgReadSpeed = 0.0;

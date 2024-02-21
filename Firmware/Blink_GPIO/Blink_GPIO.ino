@@ -1,3 +1,24 @@
+/*
+  Drive various pins high/low
+  By: Nathan Seidle
+  SparkFun Electronics
+  Date: January 13, 2024
+  License: MIT. Please see LICENSE.md for more information.
+
+  This example shows how to toggle the avilable pins on the ESP32 S3 Thing Plus. 
+
+  Feel like supporting open source hardware?
+  Buy a board from SparkFun!
+  SparkFun ESP32-S3 Thing Plus (DEV-24408) https://www.sparkfun.com/products/24408
+
+  Board: ESP32S3 Dev Module
+  USB Mode: Hardware CDC and JTAG
+  USB CDC on Boot: Enabled
+  Upload Mode: UART0 / Hardware CDC
+  PSRAM: QSPI PSRAM
+  Port: Select the COM port that the device shows up on under device manager
+*/
+
 //int gpios[] = {43, 44, 8, 9, 13, 11, 12, 10, 14, 15, 16, 17, 18, 21, 7, 6, 5, 4, 2, 1, 42};
 int gpios[] = {48}; //Card detect
 //int gpios[] = {45}; //Qwiic power control
