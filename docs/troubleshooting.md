@@ -1,3 +1,23 @@
+## esptool Upload Error
+
+Some users may run into this upload error related to esptool:
+
+esptool.py v4.5.1
+Serial port COM33
+Connecting....
+
+A serial exception error occurred: Write timeout
+Note: This error originates from pySerial. It is likely not a problem with esptool, but with the hardware connection or drivers.
+For troubleshooting steps visit: https://docs.espressif.com/projects/esptool/en/latest/troubleshooting.html
+the selected serial port For troubleshooting steps visit: https://docs.espressif.com/projects/esptool/en/latest/troubleshooting.html
+does not exist or your board is not connected
+
+This error means the board is not entering ROM bootloader mode automatically, causing the upload to hang and fail. We found this relates specifically to esptool.py v4.5.1 in the current stable release of the ESP32 Boards Package (2.0.11). Users can work around this error with one of the following three fixes: 
+    
+1. Use the alpha release (3.0.0 alpha3) of the ESP32 Boards Package. This release updates to esptool.py v4.6.
+2. Download the latest release of esptool.py from the [GitHub repository](https://github.com/espressif/esptool/releases) releases and then manually replace it in the espressif boards package folder. 
+3. If you want to keep using the current full release and encounter this error, force the board to enter the bootloader by holding the BOOT button down, clicking the RESET button, and then releasing the BOOT button.
+
 ## General Troubleshooting
 
 !!! warning "Need Help?"

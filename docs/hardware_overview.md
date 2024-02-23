@@ -56,7 +56,7 @@ The board has a &micro;SD card slot that connects to the ESP32-S3's SDIO-4 pins.
 [![Photo highlighting microSD card slot.](./assets/){ width="600"}](./assets/ "Click to enlarge")
 </figure>
 
-We chose to tie the SD card the SDIO interface instead of the dedicated SPI bus as we found it to be reliably faster for read/write speeds averaging roughly 2-3MB/s (read) and ~5-7MB/s (write) though speeds vary depending on the card used. One thing to note about this connector is the SD Card Detect pin is pulled to Ground (LOW) with no card present and shorts to 3.3V (HIGH) with a card inserted. Read on to the "Arduino Examples" section for a detailed example on how to monitor and read this pin.
+We chose to connect the SD card to the SDIO interface instead of the dedicated SPI bus as we found it to be reliably faster for read/write speeds averaging roughly 2-3MB/s (read) and ~5-7MB/s (write) though speeds vary depending on the card used. One thing to note about this connector is the SD Card Detect pin is pulled to Ground (LOW) with no card present and shorts to 3.3V (HIGH) with a card inserted. Read on to the "Arduino Examples" section for an example of how to monitor and read this pin.
 
 ## Buttons
 
