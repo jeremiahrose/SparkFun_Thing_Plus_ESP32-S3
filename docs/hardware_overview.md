@@ -8,7 +8,7 @@ This Thing Plus uses the ESP32-S3-MINI1 wireless module from espressif. The ESP3
 [![Photo highlighting ESP32-S3 module.](./assets/){ width="600"}](./assets/ "Click to enlarge")
 </figure>
 
-The ESP32-S3-MINI1 
+The ESP32-S3-MINI1 offers an impressive peripheral features set including UART, I<sup>2</sup>C, I<sup>2</sup>S, SPI, LCD, Camera Interface, LED PWM, SDIO host, two-wire automotive interface (TWAI<sup>&reg;</sup>) that is compatible with ISO 11898-1/CAN Spec 2.0 and more. This Thing Plus uses the ESP32-S3-MINI1-N4R2 which features 4MB Quad SPI Flash memory and 2MB of PSRAM (Pseudo-static RAM). The ESP32-S3 also has a full-speed USB 2.0 On-The-Go (OTG) interface for USB communication so it does not need any external UART-to-USB conversion.
 
 ## Power Components
 
@@ -42,7 +42,9 @@ Thing Plus boards break out a large number of GPIO and interface pins to a pair 
 
 ### PTH Headers
 
+The Thing Plus's pair of PTH headers break out a selection of 21 GPIO pins from the ESP32-S3 along with PTH connections to USB voltage (5V), regulated 3.3V, battery voltage, ESP32 reset signal, and the voltage regulator Enable pin.
 
+Nearly all of the GPIO pins can function in multiple configurations though some of them have more capabilities than others and some are limited to fewer functions. Pins labeled 10, 14, 15, 16, 17, and 18 are all analog capable and also work as capacitive touch inputs. The pins labeled for UART (RX/TX), I<sup>2</sup>C (SDA/SCL), and SPI (POCI, PICO, & SCK) work primarily for their labeled functions but can be altered for other uses. Refer to the [datasheet](./assets/component_documentation/esp32-s3-mini-1_mini-1u_datasheet_en.pdf) datasheet for complete information on the pin functionality.
 
 ### Qwiic Connector
 
@@ -63,7 +65,7 @@ We chose to connect the SD card to the SDIO interface instead of the dedicated S
 There are two buttons on the board labeled <b>RESET</b> and <b>BOOT</b>. The RESET button is tied to the ESP32-S3's Enable (EN) pin and resets the module when pressed. The BOOT button puts the ESP32-S3 into bootloader mode when held down during power on or reset.
 
 <figure markdown>
-[![Photo highlighting solder jumpers.](./assets/){ width="600"}](./assets/ "Click to enlarge")
+[![Photo highlighting buttons.](./assets/){ width="600"}](./assets/ "Click to enlarge")
 </figure>
 
 ## LEDs
@@ -78,6 +80,10 @@ This Thing Plus has three standard LEDs labeled <b>PWR</b>, <b>CHG</b>, <b>STAT<
 
 The board has three solder jumpers labeled <b>PWR</b>, <b>CHG</b>, and <b>LP_CTL</b>. The <b>PWR</b> jumper completes the circuit for the Power LED and is CLOSED by default. Open it to disable the Power LED. The <b>CHG</b> jumper completes the circuit for the Charge LED and is CLOSED by default. Open the solder jumper to disable the Charge LED.
 
+<figure markdown>
+[![Photo highlighting solder jumpers.](./assets/){ width="600"}](./assets/ "Click to enlarge")
+</figure>
+
 The <b>LP_CTL</b> jumper controls how the Low Power and Peripherals power works. It is CLOSED by default to pull the power the RT9080 3.3V regulator's enable pin HIGH to enable peripheral power on the <b>3.3V_P</b> rail. 
 
 ## Board Dimensions
@@ -85,5 +91,5 @@ The <b>LP_CTL</b> jumper controls how the Low Power and Peripherals power works.
 This board matches the Thing Plus footprint and measures 2.30" x 0.90" (58.42mm x 22.86mm) with four mounting holes that fit a [4-40 screw](https://www.sparkfun.com/products/10453) though the top two mounting holes are slightly obstructed by the ESP32-S3 module so using those can be a bit troublesome.
 
 <figure markdown>
-[![Board dimensions.](./assets/){ width="600"}](./assets/ "Click to enlarge")
+[![Board dimensions.](./assets/board_files/SparkFun_Thing_Plus_ESP32-S3-Dimensions.jpg){ width="600"}](./assets/board_files/SparkFun_Thing_Plus_ESP32-S3-Dimensions.jpg "Click to enlarge")
 </figure>

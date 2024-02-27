@@ -2,7 +2,7 @@ Now that we're familiar with the hardware on this Thing Plus board, it's time to
 
 ## Basic USB Assembly
 
-Basic assembly of the Thing Plus ESP32-S3 only requires a USB-C cable connecting the board to a computer. Just plug the cable into the USB-C connector like the photo below shows and move on to the Software Setup section. 
+Basic assembly of the Thing Plus ESP32-S3 only requires a USB-C cable connecting the board to a computer. Just plug the cable into the USB-C connector and move on to the Software Setup section. When powered up for the first time, the RGB LED on the "top-right" of the board should be cycling through a rainbow color similar to the video below:
 
 **Photo showing USB connection**
 

@@ -18,6 +18,10 @@ This error means the board is not entering ROM bootloader mode automatically, ca
 2. Download the latest release of esptool.py from the [GitHub repository](https://github.com/espressif/esptool/releases) releases and then manually replace it in the espressif boards package folder. 
 3. If you want to keep using the current full release and encounter this error, force the board to enter the bootloader by holding the BOOT button down, clicking the RESET button, and then releasing the BOOT button.
 
+### Digital Reset
+
+Some users may run into an issue when uploading completes where the board does not digitally reset properly. If you notice your code is not running after upload finishes, just press the RESET button on the board and it should start running.
+
 ## General Troubleshooting
 
 !!! warning "Need Help?"
