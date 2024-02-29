@@ -5,7 +5,7 @@ Let's take a closer look at the ESP32-S3 module and other hardware present on th
 This Thing Plus uses the ESP32-S3-MINI1 wireless module from espressif. The ESP32-S3 is built around the extremely powerful Xtensa<sup>&reg;</sup> dual-core 32-bit LX7 microprocessor with a wireless stack that supports 2.4 GHz WiFi and Bluetooth<sup>&reg;</sup> 5 (LE) with an integrated PCB antenna.
 
 <figure markdown>
-[![Photo highlighting ESP32-S3 module.](./assets/){ width="600"}](./assets/ "Click to enlarge")
+[![Photo highlighting ESP32-S3 module.](./assets/img/Thing_Plus_ESP32S3-Module.jpg){ width="600"}](./assets/img/Thing_Plus_ESP32S3-Module.jpg "Click to enlarge")
 </figure>
 
 The ESP32-S3-MINI1 offers an impressive peripheral features set including UART, I<sup>2</sup>C, I<sup>2</sup>S, SPI, LCD, Camera Interface, LED PWM, SDIO host, two-wire automotive interface (TWAI<sup>&reg;</sup>) that is compatible with ISO 11898-1/CAN Spec 2.0 and more. This Thing Plus uses the ESP32-S3-MINI1-N4R2 which features 4MB Quad SPI Flash memory and 2MB of PSRAM (Pseudo-static RAM). The ESP32-S3 also has a full-speed USB 2.0 On-The-Go (OTG) interface for USB communication so it does not need any external UART-to-USB conversion.
@@ -15,7 +15,7 @@ The ESP32-S3-MINI1 offers an impressive peripheral features set including UART, 
 The Thing Plus ESP32-S3 includes several options for powering including USB-C, LiPo battery with on-board battery charging and monitoring circuits as well as direct power inputs.
 
 <figure markdown>
-[![Photo highlighting power components/pins.](./assets/){ width="600"}](./assets/ "Click to enlarge")
+[![Photo highlighting power components/pins.](./assets/img/Thing_Plus_ESP32S3-Power.jpg){ width="600"}](./assets/img/Thing_Plus_ESP32S3-Power.jpg "Click to enlarge")
 </figure>
 
 ### USB-C Connector
@@ -37,25 +37,29 @@ The board includes a second RT9080 3.3V regulator to control power to the periph
 Thing Plus boards break out a large number of GPIO and interface pins to a pair of 0.1"-spaced plated through-hole (PTH) headers and also has a Qwiic connector for easy integration into SparkFun's [Qwiic ecosystem](https://www.sparkfun.com/qwiic).
 
 <figure markdown>
-[![Photo highlighting pinout and Qwiic connector.](./assets/){ width="600"}](./assets/ "Click to enlarge")
+[![Photo highlighting pinout and Qwiic connector.](./assets/img/Thing_Plus_ESP32S3-QwiicPTHs.jpg){ width="600"}](./assets/img/Thing_Plus_ESP32S3-QwiicPTHs.jpg "Click to enlarge")
 </figure>
+
+### Qwiic Connector
+
+The Qwiic connector is tied to the ESP32-S3's I<sup>2</sup>C bus (IO8/SDA and IO9/SCL). The Qwiic connector provides connections for SDA, SCL, 3.3V, and Ground. Note, the Qwiic connector power and I<sup>2</sup>C pins are tied to 3.3V_P and are powered by default but if the peripheral power control circuit is adjusted as covered above, it will not function properly without enabling 3.3V_P through code.
 
 ### PTH Headers
 
 The Thing Plus's pair of PTH headers break out a selection of 21 GPIO pins from the ESP32-S3 along with PTH connections to USB voltage (5V), regulated 3.3V, battery voltage, ESP32 reset signal, and the voltage regulator Enable pin.
 
+<figure markdown>
+[![Photo highlighting PTH pinout.](./assets/img/Thing_Plus_ESP32S3-PTHs.jpg){ width="600"}](./assets/img/Thing_Plus_ESP32S3-PTHs.jpg "Click to enlarge")
+</figure>
+
 Nearly all of the GPIO pins can function in multiple configurations though some of them have more capabilities than others and some are limited to fewer functions. Pins labeled 10, 14, 15, 16, 17, and 18 are all analog capable and also work as capacitive touch inputs. The pins labeled for UART (RX/TX), I<sup>2</sup>C (SDA/SCL), and SPI (POCI, PICO, & SCK) work primarily for their labeled functions but can be altered for other uses. Refer to the [datasheet](./assets/component_documentation/esp32-s3-mini-1_mini-1u_datasheet_en.pdf) datasheet for complete information on the pin functionality.
-
-### Qwiic Connector
-
-The Qwiic connector is tied to the ESP32-S3's I<sup>2</sup>C bus (IO8/SDA and IO9/SCL). The Qwiic connector provides connections for SDA, SCL, 3.3V, and Ground. Note, the Qwiic connector power and I<sup>2</sup>C pins are tied to 3.3V_P and are powered by default but if the peripheral power control circuit is adjusted as covered above, it will not function properly without enabling 3.3V_P through code.
 
 ## &micro;SD Card Slot
 
 The board has a &micro;SD card slot that connects to the ESP32-S3's SDIO-4 pins. It is a fricton-fit connector so no "clicking" and "unclicking" is necessary. Just plug it in nice and snug. 
 
 <figure markdown>
-[![Photo highlighting microSD card slot.](./assets/){ width="600"}](./assets/ "Click to enlarge")
+[![Photo highlighting microSD card slot.](./assets/img/Thing_Plus_ESP32S3-microSD.jpg){ width="600"}](./assets/img/Thing_Plus_ESP32S3-microSD.jpg "Click to enlarge")
 </figure>
 
 We chose to connect the SD card to the SDIO interface instead of the dedicated SPI bus as we found it to be reliably faster for read/write speeds averaging roughly 2-3MB/s (read) and ~5-7MB/s (write) though speeds vary depending on the card used. One thing to note about this connector is the SD Card Detect pin is pulled to Ground (LOW) with no card present and shorts to 3.3V (HIGH) with a card inserted. Read on to the "Arduino Examples" section for an example of how to monitor and read this pin.
@@ -65,7 +69,7 @@ We chose to connect the SD card to the SDIO interface instead of the dedicated S
 There are two buttons on the board labeled <b>RESET</b> and <b>BOOT</b>. The RESET button is tied to the ESP32-S3's Enable (EN) pin and resets the module when pressed. The BOOT button puts the ESP32-S3 into bootloader mode when held down during power on or reset.
 
 <figure markdown>
-[![Photo highlighting buttons.](./assets/){ width="600"}](./assets/ "Click to enlarge")
+[![Photo highlighting buttons.](./assets/img/Thing_Plus_ESP32S3-Buttons.jpg){ width="600"}](./assets/img/Thing_Plus_ESP32S3-Buttons.jpg "Click to enlarge")
 </figure>
 
 ## LEDs
@@ -73,7 +77,7 @@ There are two buttons on the board labeled <b>RESET</b> and <b>BOOT</b>. The RES
 This Thing Plus has three standard LEDs labeled <b>PWR</b>, <b>CHG</b>, <b>STAT</b>, and a WS2812 RGB LED next to the ESP32-S3 module on the top of the board. The red Power (PWR) LED indicates whenever the <b>3.3V</b> circuit is powered. The yellow Charge (CHG) LED indicates whenever the MCP73831 is charging a connected LiPo battery. The green Status (STAT) LED is tied to IO0. The WS2812 RGB LED connects the LED's Data In signal to IO46.
 
 <figure markdown>
-[![Photo highlighting LEDs.](./assets/){ width="600"}](./assets/ "Click to enlarge")
+[![Photo highlighting LEDs.](./assets/img/Thing_Plus_ESP32S3-LEDs.jpg){ width="600"}](./assets/img/Thing_Plus_ESP32S3-LEDs.jpg "Click to enlarge")
 </figure>
 
 ## Solder Jumpers
@@ -81,7 +85,7 @@ This Thing Plus has three standard LEDs labeled <b>PWR</b>, <b>CHG</b>, <b>STAT<
 The board has three solder jumpers labeled <b>PWR</b>, <b>CHG</b>, and <b>LP_CTL</b>. The <b>PWR</b> jumper completes the circuit for the Power LED and is CLOSED by default. Open it to disable the Power LED. The <b>CHG</b> jumper completes the circuit for the Charge LED and is CLOSED by default. Open the solder jumper to disable the Charge LED.
 
 <figure markdown>
-[![Photo highlighting solder jumpers.](./assets/){ width="600"}](./assets/ "Click to enlarge")
+[![Photo highlighting solder jumpers.](./assets/img/Thing_Plus_ESP32S3-Jumpers.jpg){ width="600"}](./assets/img/Thing_Plus_ESP32S3-Jumpers.jpg "Click to enlarge")
 </figure>
 
 The <b>LP_CTL</b> jumper controls how the Low Power and Peripherals power works. It is CLOSED by default to pull the power the RT9080 3.3V regulator's enable pin HIGH to enable peripheral power on the <b>3.3V_P</b> rail. 

@@ -65,6 +65,10 @@ This example shows how to toggle the peripheral power voltage supply on and off 
 	```
 -->
 
+<figure markdown>
+[![Serial printout of I2C scan.](./assets/img/I2C_Scanner_Output.jpg){ width="600"}](./assets/img/I2C_Scanner_Output.jpg "Click to enlarge")
+</figure>
+
 ## SD Card Detect
 
 The SD Card Detect example is a simple example that monitors the card detect pin on the &micro;SD card slot. As mentioned in the Hardware Overview section, the card detect switch is normally open and closed with a card inserted so the switch goes to VDD (3.3V). This requires us to set up an internal pull-down for card detection to work properly. 

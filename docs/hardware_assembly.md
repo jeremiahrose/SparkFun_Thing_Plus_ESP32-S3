@@ -4,7 +4,9 @@ Now that we're familiar with the hardware on this Thing Plus board, it's time to
 
 Basic assembly of the Thing Plus ESP32-S3 only requires a USB-C cable connecting the board to a computer. Just plug the cable into the USB-C connector and move on to the Software Setup section. When powered up for the first time, the RGB LED on the "top-right" of the board should be cycling through a rainbow color similar to the video below:
 
-**Photo showing USB connection**
+<figure markdown>
+[![Short video showing RGB led cycling.](./assets/img/WRL-24408-ESP-32-S3-Action-GIF.gif){ width="600"}](./assets/img/WRL-24408-ESP-32-S3-Action-GIF.gif "Click to enlarge")
+</figure>
 
 !!! note
     Your computer may not recognize the board as a known USB device if you have not installed the espressif boards package in Arduino and/or installed the espressif IDF.
@@ -12,8 +14,6 @@ Basic assembly of the Thing Plus ESP32-S3 only requires a USB-C cable connecting
 ## Battery Assembly
 
 If you prefer a battery-powered application, plug a single-cell LiPo battery into the 2-pin JST connector on the underside of the board like the photo below. Remember, the MCP73831 only charges the battery when V_USB has voltage present either from the USB-C connector or through the V_USB PTH pin.
-
-**Photo showing battery connection**
 
 For tips on the proper use of a LiPo battery and the 2-pin JST connector, please read through our [Single Cell LiPo Battery Care](https://learn.sparkfun.com/tutorials/single-cell-lipo-battery-care) tutorial.
 
