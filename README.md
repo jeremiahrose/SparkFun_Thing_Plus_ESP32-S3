@@ -1,35 +1,34 @@
-SparkFun Thing Plus - ESP32 WROOM (USB-C)
+SparkFun Thing Plus - ESP32-S3
 ========================================
 
-[![SparkFun Thing Plus - ESP32 WROOM (USB-C)](https://cdn.sparkfun.com/assets/parts/1/9/9/6/8/20168Diagonal.jpg)](https://www.sparkfun.com/products/20168)
+[![SparkFun Thing Plus - ESP32-S3](https://cdn.sparkfun.com/r/600-600/assets/parts/2/4/7/6/6/WRL-24408-ESP-32-S3-Feature.jpg)](https://www.sparkfun.com/products/24408)
 
-*[SparkFun Thing Plus - ESP32 WROOM (USB-C) (WRL-20168)](https://www.sparkfun.com/products/20168)*
+*[SparkFun Thing Plus - ESP32-S3) (WRL-24408)](https://www.sparkfun.com/products/24408)*
 
-The [SparkFun Thing Plus - ESP32 WROOM (USB-C)](https://www.sparkfun.com/products/20168) is a comprehensive development platform for [Espressif's ESP32](https://espressif.com/en/products/hardware/esp32/overview). Thanks to the onboard ESP32 WROOM module, the SparkFun Thing Plus features 16MB of flash memory, 520kB of internal SRAM, an integrated 802.11 BGN WiFi transceiver and dual-mode Bluetooth capabilities, a JST connector to plug in a LiPo battery, a Qwiic connector, and 21 I/O pins. Add to that a rich set of peripherals ranging from capacitive touch sensors, Hall sensors, SD card interface, Ethernet, high-speed SPIs, UARTs, I2S, and I<sup>2</sup>C.
+The [SparkFun Thing Plus - ESP32-S3](https://www.sparkfun.com/products/24408) brings a powerful and versatile IoT development platform to the Thing Plus product line. It features the ESP32 WROOM-S3 MINI wireless module from espressif<sup>&trade;</sup>. The ESP32 WROOM-S3 is built around an Xtensa<sup>&reg;</sup> 32-bit LX7 processor with massive processing power that operates at up to 240 MHz. It supports both 2.4 GHz WiFi and Bluetooth<sup>&reg;</sup> 5 (LE) with a built-in PCB antenna. This version of the ESP32-S3 has 4MB Flash memory and 2MB of dynamic/PSRAM and the board also has with a &micro;SD card slot for those who need more storage space.
 
-We took all the good from the original [ESP32 Thing Plus](https://www.sparkfun.com/products/15663) and sprinkled on some more. We upgraded to a USB-C connector that provides up to 2A of power, added a fuel gauge IC that will make sure you know your battery levels, included a NeoPixel (WS2812C) RGB LED is the perfect multi-status indicator, and threw a microSD connector on the back! Oh, and the new taller reset and boot buttons are **so** much easier to push! We even dedicated a voltage regulator to the Qwiic connector, which enables software power control to the Qwiic bus - great for low power logging!
+The module has a large set of peripherals including UART, I<sup>2</sup>C, SPI, LCD control, SDIO host, TWAI<sup>&reg;</sup> controller (compatible
+with ISO 11898-1, i.e., CAN Specification 2.), and more. The module allows for customizing which GPIO pins these peripherals operate on though some are limited to specific pins. The ESP32-S3 can run two USB ports simultaneously and can even act as a USB host host device.
+
+The Thing Plus footprint breaks out all of the ESP32-C6's 23 GPIO pins to a pair 0.1"-spaced plated through hole (PTH) headers. The board also has a USB-C connector for primary power and programming, 2-pin JST connector for a LiPo battery (not included), a microSD card slot for expanded storage, and a Qwiic connector to integrate it into SparkFun's [Qwiic ecosystem](https://www.sparkfun.com/qwiic). It also includes a charging circuit and fuel gauge for charging and monitoring an attached LiPo battery. 
+
 
 
 Repository Contents
 -------------------
 
+* **[/Documents](/Documents/)** - Datasheets, additional product information
 * **[/Hardware](/Hardware/)** - Eagle design files (.brd, .sch)
 * **[/Firmware](/Firmware/)** - Example sketches demonstrating extra peripherals
+* **[/docs](/docs)** - Documentation files for the Thing Plus ESP32-S3 Hookup Guide
 
 Documentation
 --------------
-* **[Hookup Guide](https://learn.sparkfun.com/tutorials/2353)** - Hookup guide for the ESP32 Thing Plus (USB-C).
-* **[SparkFun Graphical Datasheets](https://github.com/sparkfun/Graphical_Datasheets)** -Graphical Datasheets for various SparkFun products.
+* **[Hookup Guide](https://sparkfun.github.io/SparkFun_Thing_Plus_ESP32-S3)** - Hookup guide for the Thing Plus ESP32-S3.
 
 Product Versions
 ----------------
-* ESP32 Thing Plus (USB-C variant)
-  * [WRL-20168](https://www.sparkfun.com/products/20168) - v1.0, Initial Release
-  * [SPX-18018](https://www.sparkfun.com/products/18018) - SparkX Release
-* ESP32 Thing Plus
-  * [WRL-17381](https://www.sparkfun.com/products/17381) (u.FL variant) - v1.0, Initial Release
-  * [WRL-15663](https://www.sparkfun.com/products/15663)- v2.0, Slight hardware update that includes a 10&ohm; series resistor between VUSB and CP2102
-  * [WRL-14689](https://www.sparkfun.com/products/14689)- v1.0, Initial Release
+* [WRL-24408](https://www.sparkfun.com/products/24408) - v1.0, Initial Release
 
 License Information
 -------------------
