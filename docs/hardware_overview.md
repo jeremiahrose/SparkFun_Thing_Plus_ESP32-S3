@@ -1,3 +1,7 @@
+---
+icon: material/cog
+---
+
 Let's take a closer look at the ESP32-S3 module and other hardware present on this Thing Plus board.
 
 ## ESP32-S3 Module
@@ -88,7 +92,7 @@ The board has three solder jumpers labeled <b>PWR</b>, <b>CHG</b>, and <b>LP_CTL
 [![Photo highlighting solder jumpers.](./assets/img/Thing_Plus_ESP32S3-Jumpers.jpg){ width="600"}](./assets/img/Thing_Plus_ESP32S3-Jumpers.jpg "Click to enlarge")
 </figure>
 
-The <b>LP_CTL</b> jumper controls how the Low Power and Peripherals power works. It is CLOSED by default to pull the power the RT9080 3.3V regulator's enable pin HIGH to enable peripheral power on the <b>3.3V_P</b> rail. 
+The <b>LP_CTL</b> jumper controls how the Low Power and Peripherals power works. It is CLOSED by default to pull the power the RT9080 3.3V regulator's enable pin HIGH to enable peripheral power on the <b>3.3V_P</b> rail. When opened, the regulator's enable pin connects directly to ESP32 IO45 for users to control manually. Refer to "Peripheral Power Control" above for more information.
 
 ## Board Dimensions
 

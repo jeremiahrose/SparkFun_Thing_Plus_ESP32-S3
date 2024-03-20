@@ -11,16 +11,16 @@ icon: material/book-open-page-variant
     ---
 
     <figure markdown>
-    ![Product Thumbnail]()
+    ![Product Thumbnail](https://cdn.sparkfun.com/r/600-600/assets/parts/2/4/7/6/6/WRL-24408-ESP-32-S3-Feature.jpg)
     </figure></a>
 
 
 
 -    The SparkFun Thing Plus - ESP32-S3 features the powerful and versatile ESP32-S3 from espressif<sup>&trade;</sup>. The ESP32-S3  It includes a LiPo battery charger and fuel gauge, &micro;SD card slot, an addressable LED and more. The Thing Plus footprint breaks out all of the ESP32-S3's 23 GPIO pins to 0.1"-spaced PTH headers. The board also has a USB-C connector for primary power and programming, 2-pin JST connector for a LiPo battery, and a Qwiic connector to integrate it into SparkFun's [Qwiic ecosystem](https://www.sparkfun.com/qwiic).
 
-    The ESP32 WROOM-S3 is built around an Xtensa<sup>&reg;</sup> 32-bit LX7 processor with massive processing power that operates at up to 240 MHz. It supports both 2.4 GHz WiFi and Bluetooth<sup>&reg;</sup> 5 (LE) with a built-in PCB antenna. This version of the ESP32-S3 has 4MB Flash memory and 2MB of dynamic/PSRAM and the board also has with a &micro;SD card slot for those who need more storage space.
+    The ESP32 WROOM-S3 is built around an Xtensa<sup>&reg;</sup> 32-bit LX7 processor with massive processing power that operates at up to 240 MHz. It supports both 2.4 GHz WiFi and Bluetooth<sup>&reg;</sup> 5 (LE) with a built-in PCB antenna. This version of the ESP32-S3 has 4MB Flash memory and 2MB of dynamic/PSRAM and the board also has a &micro;SD card slot for those who need more storage space.
 
-    The module has a host of peripherals that can be tied to nearly any GPIO pin including UART, I<sup>2</sup>C, SPI, LCD control, SDIO host, TWAI<sup>&reg;</sup> controller (compatible with ISO 11898-1, i.e., CAN Specification 2.), and more. The ESP32-S3 can run two USB ports simultaneously and can act as a USB host meaning you can connect USB peripherals like a keyboard or mouse to it in this configuration.
+    The module has a host of peripherals that can be tied to nearly any GPIO pin including UART, I<sup>2</sup>C, SPI, LCD control, SDIO host, TWAI<sup>&reg;</sup> controller (compatible with ISO 11898-1, i.e., CAN Specification 2.), and more. The ESP32-S3 can run two USB ports simultaneously and can act as a USB host.
 
     <center>
     [Purchase from SparkFun :fontawesome-solid-cart-plus:{ .heart }](https://www.sparkfun.com/products/24408){ .md-button .md-button--primary }

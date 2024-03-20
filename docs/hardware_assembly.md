@@ -1,3 +1,7 @@
+---
+icon: material/cog
+---
+
 Now that we're familiar with the hardware on this Thing Plus board, it's time to connect it to our computer or battery power.
 
 ## Basic USB Assembly

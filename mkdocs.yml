@@ -202,8 +202,8 @@ nav:
     - Hardware Assembly: hardware_assembly.md
     - Software Setup: 
       - Arduino Setup: software_setup.md
-      - Arduino Example: arduino_example.md
-  - Resources: resources_and_going_further.md
+      - Arduino Examples: arduino_example.md
+  - Resources: resources.md
   - Support:
     - Troubleshooting: troubleshooting.md
     - Submit Issues: github/file_issue.md
