@@ -200,7 +200,7 @@ nav:
     - Introduction: introduction.md
     - Hardware Overview: hardware_overview.md
     - Hardware Assembly: hardware_assembly.md
-    - Software Setup: 
+    - Software Setup & Examples: 
       - Arduino Setup: software_setup.md
       - Arduino Examples: arduino_example.md
   - Resources: resources.md

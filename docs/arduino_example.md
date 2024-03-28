@@ -47,12 +47,21 @@ This does require some manual definition/setup for pins in the code which the ex
 
 This example uses the FastLED library to cycle the RGB LED on the Thing Plus through a rainbow. Open the code from your downloaded copy of the GitHub repository or copy the code below into a blank sketch. Make sure the FastLED Library is installed, select the board (ESP32S3 Dev Module) and the Port, and click the "Upload" button.  
 
+??? "RGB LED Example"
+    ```
 
+    --8<-- "https://raw.githubusercontent.com/sparkfun/SparkFun_Thing_Plus_ESP32-S3/main/Firmware/RGB_LED/RGB_LED.ino"
+    ```
 
 ## I<sup>2</sup>C Scanner Power Control
 
 This example shows how to toggle the peripheral power voltage supply on and off as well as scan for any I<sup>2</sup>C devices connected to the I<sup>2</sup>C bus/Qwiic connector. After uploading, open the [serial monitor](https://learn.sparkfun.com/tutorials/terminal-basics/arduino-serial-monitor-windows-mac-linux) with the baud set to **115200** and you should see a serial printout of the Fuel Gauge at 0x32 as well as any other devices connected to the Qwiic connector like the screenshot below shows. If you have a Qwiic board plugged in you should see the power LED on it blinking every second as the bus is powered on and off.
 
+??? "I2C Scanner Power Control Example"
+    ```
+
+    --8<-- "https://raw.githubusercontent.com/sparkfun/SparkFun_Thing_Plus_ESP32-S3/main/Firmware/I2C_Scanner_PowerControl/I2C_Scanner_PowerControl.ino"
+    ```
 
 <figure markdown>
 [![Serial printout of I2C scan.](./assets/img/I2C_Scanner_Output.jpg){ width="600"}](./assets/img/I2C_Scanner_Output.jpg "Click to enlarge")
@@ -64,9 +73,18 @@ The SD Card Detect example is a simple example that monitors the card detect pin
 
 After uploading, you can open the serial monitor with the baud set to **115200** and it should print out either "Card Inserted" or "No SD Card" depending on whether or not a &micro;SD card is present.
 
+??? "SD Card Detect Example"
+    ```
 
+    --8<-- "https://raw.githubusercontent.com/sparkfun/SparkFun_Thing_Plus_ESP32-S3/main/Firmware/SD_Card_Detect/SD_Card_Detect.ino"
+    ```
 
 ## PSRAM Test
 
 This example demonstrates how to enable and use PSRAM for RAM requests above a 1,000 byte threshold. The setup initializes PSRAM and prints out whether or not this was successful and then prints out available PSRAM space.
 
+??? "PSRAM Test Example"
+    ```
+
+    --8<-- "https://raw.githubusercontent.com/sparkfun/SparkFun_Thing_Plus_ESP32-S3/main/Firmware/PSRAM_Test/PSRAM_Test.ino"
+    ```
