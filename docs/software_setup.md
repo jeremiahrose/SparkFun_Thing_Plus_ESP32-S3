@@ -8,12 +8,7 @@ icon: simple/arduino
 With the ESP32-S3 Thing Plus connected to our computer, it's time to set up the boards package in Arduino.
 
 ## Installing espressif Arduino Boards
-
-<!-- 
-	!!! important
     
-    As of this writing, the Thing Plus ESP32- S3 is awaiting approval to be included in the next alpha version of the ESP32 boards package (3.0.0-alpha2 currently) so it is *not* included in the alpha install but we're hoping it gets added very soon. We'll keep an eye out for the next update (whether it be to alpha or a full release of v3.0.0) and update this page once it is out.
--->    
 To install the ESP32 boards package, open the Preferences menu by navigating to <b>File</b> > <b>Preferences</b>. Look at the bottom of the Preferences menu for "Additional boards manager URLS" and then copy this JSON link into that field:
 
 <code>
@@ -21,10 +16,6 @@ To install the ESP32 boards package, open the Preferences menu by navigating to 
 </code>
 
 Click "Ok" and then open the *Boards Manager* tool, search for "espressif ESP32" and install the latest alpha release (3.0.0-alpha2 or later). This install process may take some time so feel free to step away while it downloads and installs.
-
-<figure markdown>
-[![ESP32 Boards manager install.](./assets/){ width="400"}](./assets/ "Click to enlarge")
-</figure>
 
 ## Optional Arduino Libraries
 
