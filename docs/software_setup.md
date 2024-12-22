@@ -31,19 +31,10 @@ Users who prefer to use espressif's development toolkit, espressif IDF, can get 
 
 ## PlatformIO
 
-This board does not yet have an official board definition in PlatformIO, but can be used with the following environment settings in `platformio.ini`:
+This board is supported in the latest version of `pioarduino/platform-espressif32`, to use it you can pull the development version of that platform:
 ```
 [env:sparkfun_esp32s3_thing_plus]
 framework = arduino
-platform = https://github.com/pioarduino/platform-espressif32/releases/download/stable/platform-espressif32.zip
-board = esp32-s3-devkitc-1
-board_build.arduino.memory_type = qio_qspi
-board_build.arduino.partitions = default.csv
-board_build.flash_mode = qio
-board_build.psram_type = qio
-board_build.cdc_on_boot = 1
-board_build.extra_flags =
-  -DARDUINO_USB_CDC_ON_BOOT=1
-board_upload.flash_size = 4MB
-board_upload.maximum_size = 4194304
+platform = https://github.com/pioarduino/platform-espressif32.git#develop
+board = sparkfun_esp32s3_thing_plus
 ```
